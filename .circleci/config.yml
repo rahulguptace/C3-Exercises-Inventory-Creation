@@ -29,8 +29,8 @@ jobs:
               --region us-east-1
 # Sequential workflow
 workflows:
-    # Name the workflow
-    myWorkflow:
-      jobs:
-        - hello-world
-        - create_infrastructure
+  # Name the workflow
+  myWorkflow:
+    jobs:
+      - hello-world
+      - create_infrastructure
