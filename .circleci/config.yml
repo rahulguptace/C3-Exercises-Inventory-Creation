@@ -15,7 +15,7 @@ jobs:
     create_infrastructure:  
     # The primary container, where your job's commands will run
       docker:
-        - image: aws-cli/default
+        - image: amazon/aws-cli
       steps:
         - checkout # check out the code in the project directory
         - aws-cli/setup:
