@@ -1,5 +1,5 @@
  AWSTemplateFormatVersion: 2010-09-09
- Description: C3 Infrastructure Creation
+ Description: C3-Exercises Infrastructure Creation
  Resources:
    EC2Instance:
      Type: 'AWS::EC2::Instance'
