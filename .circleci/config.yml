@@ -15,9 +15,13 @@ jobs:
     create_infrastructure:  
     # The primary container, where your job's commands will run
       docker:
-        - image: amazon/aws-cli
+        - image: aws-cli/default
       steps:
         - checkout # check out the code in the project directory
+        - aws-cli/setup:
+            aws-access-key-id: AWS_ACCESS_KEY
+            aws-secret-access-key: AWS_ACCESS_SECRET
+            aws-region: AWS_REGION_NAME
         - run: 
             name: Create Cloudformation Stack
             command: aws cloudformation deploy --template-file template.yml
